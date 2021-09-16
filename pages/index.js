@@ -2,81 +2,39 @@ import Head from 'next/head'
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="min-h-screen bg-white">
       <Head>
-        <title>Create Next App</title>
+        <title>TODO</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+      <header className="bg-indigo-600 shadow">
+        <div className="mx-auto p-4">
+          <h2 className="font-semibold text-xl text-white">TODO</h2>
+        </div>
+      </header>
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <main className="px-4 pb-6">
+        <div className="mt-6 shadow rounded overflow-hidden bg-gray-100">
+          <div className="p-4 flex">
+            <input class="w-full px-3 py-2 rounded shadow" type="text" />
+            <button className="ml-2 min-w-max px-4 py-2 bg-indigo-600 text-white rounded">登録</button>
+          </div>
+        </div>
+        <div className="mt-6 shadow rounded overflow-hidden bg-gray-100">
+          <div className="p-4 flex items-center justify-between">
+            <input class="w-full px-3 py-2 rounded shadow" type="text" />
+            <button className="ml-2 min-w-max px-4 py-2 bg-indigo-600 text-white rounded">更新</button>
+          </div>
+        </div>
+        <div className="mt-6 shadow rounded overflow-hidden bg-gray-100">
+          <div className="p-4 flex items-center justify-end">
+            <h3 className="w-full text-lg font-bold">テスト</h3>
+            <button className="px-4 min-w-max py-2 bg-indigo-600 text-white rounded">編集</button>
+            <button className="ml-2 min-w-max px-4 py-2 bg-red-600 text-white rounded">削除</button>
+          </div>
         </div>
       </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
     </div>
   )
 }
